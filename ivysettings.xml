@@ -6,12 +6,15 @@
   <settings defaultResolver="default" />
   <include url="${ivy.default.settings.dir}/ivysettings-public.xml"/>
   <resolvers checkmodified="true" changingPattern=".*-SNAPSHOT">
+   <chain name="chain">
     <dual name="shared" checkmodified="true">
       <url name="shared-ivy" changingPattern=".*-SNAPSHOT" checkmodified="true">
         <ivy pattern="http://repo.pentaho.org/artifactory/repo/[organisation]/[module]/[revision]/[module]-[revision].ivy.xml" />
       </url>
       <ibiblio name="shared-mvn" m2compatible="true" root="http://repo.pentaho.org/artifactory/repo" checkmodified="true"/>
     </dual>
+<ibiblio name="central" m2compatible="true" root="http://repo1.maven.org/maven2/" />
+</chain>
   </resolvers>
   <include url="${ivy.default.settings.dir}/ivysettings-local.xml"/>
   <include url="${ivy.default.settings.dir}/ivysettings-main-chain.xml"/>
