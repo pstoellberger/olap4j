@@ -13,7 +13,7 @@
       </url>
       <ibiblio name="shared-mvn" m2compatible="true" root="http://repo.pentaho.org/artifactory/repo" checkmodified="true"/>
     </dual>
-<ibiblio name="central" m2compatible="true" root="http://repo1.maven.org/maven2/" />
+<ibiblio name="mavenCentral" m2compatible="true" root="http://repo1.maven.org/maven2/" />
 </chain>
   </resolvers>
   <include url="${ivy.default.settings.dir}/ivysettings-local.xml"/>
